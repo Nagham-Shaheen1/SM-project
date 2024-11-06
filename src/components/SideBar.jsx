@@ -14,13 +14,15 @@ import {
 import classes from '../assets/css/NavbarNested.module.css';
 
 const data = [
-    { link: '', label: 'Notifications', icon: IconBellRinging },
-    { link: '', label: 'Billing', icon: IconReceipt2 },
-    { link: '', label: 'Security', icon: IconFingerprint },
-    { link: '', label: 'SSH Keys', icon: IconKey },
-    { link: '', label: 'Databases', icon: IconDatabaseImport },
-    { link: '', label: 'Authentication', icon: Icon2fa },
-    { link: '', label: 'Other Settings', icon: IconSettings },
+    { link: '', label: 'Dashboard', icon: IconBellRinging },
+    { link: '', label: 'Roles', icon: IconReceipt2 },
+    { link: '', label: 'Admins', icon: IconFingerprint },
+    { link: '', label: 'Traders', icon: IconKey },
+    { link: '', label: 'Stores', icon: IconDatabaseImport },
+    { link: '', label: 'Customers', icon: Icon2fa },
+    { link: '', label: 'Shipping', icon: IconSettings },
+    { link: '', label: 'Orders', icon: Icon2fa },
+    { link: '', label: 'Coupons', icon: IconSettings },
 ];
 
 export function SideBar() {
@@ -43,11 +45,12 @@ export function SideBar() {
     ));
 
     return (
-        <nav className={classes.navbar} >
+        <nav className={classes.navbar} style={{backgroundColor:'purple'}}>
             <div className={classes.navbarMain}>
                 <Group className={classes.header} justify="space-between">
                     <div className="logo">
-                        <Text size='20px'>SUPER MALL</Text>
+                        <Text size='20px' style={{padding:'15px'}}>SUPER MALL</Text>
+                        <Text size='15px' style={{paddingLeft:'30px'}}>control panel</Text>
                     </div>
 
                 </Group>
@@ -57,7 +60,7 @@ export function SideBar() {
             <div className={classes.footer}>
                 <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
                     <IconSwitchHorizontal className={classes.linkIcon} stroke={1.5} />
-                    <span>Change account</span>
+                    <span>Contact</span>
                 </a>
 
                 <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>

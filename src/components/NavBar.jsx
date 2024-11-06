@@ -10,13 +10,13 @@ import { FiSearch } from "react-icons/fi";
 import '../assets/css/navbar.css'
 import { routerLink } from '../router/routes'
 
-
+import { FiAlignJustify } from "react-icons/fi";
 
 const NavBar = () => {
 
 
     return (
-
+<div style={{backgroundColor:'gray'}}>
         <Flex
             justify={'space-around'}
             align={'center'}
@@ -43,10 +43,12 @@ const NavBar = () => {
                 }
             </Flex>
             <Flex gap={15} align={'center'}>
+            <FiAlignJustify />
                 <FiSearch />
                 <ToggleTheme />
             </Flex>
         </Flex>
+        </div>
     )
 }
 

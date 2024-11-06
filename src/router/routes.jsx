@@ -7,7 +7,7 @@ export const routerLink = [
     {
         path: "/",
         element: <HomePage />,
-        name: 'Home Page'
+        name: 'Home'
     }
 ]
 
