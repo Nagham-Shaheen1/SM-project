@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Anchor } from '@mantine/core';
 import { Group, Code, Text } from '@mantine/core';
 import {
     IconBellRinging,
@@ -12,9 +13,10 @@ import {
     IconLogout,
 } from '@tabler/icons-react';
 import classes from '../assets/css/NavbarNested.module.css';
+import { Link } from 'react-router-dom';
 
 const data = [
-    { link: '', label: 'Dashboard', icon: IconBellRinging },
+    { link: '/home', label: 'Dashboard', icon: IconBellRinging },
     { link: '', label: 'Roles', icon: IconReceipt2 },
     { link: '', label: 'Admins', icon: IconFingerprint },
     { link: '', label: 'Traders', icon: IconKey },
@@ -28,20 +30,16 @@ const data = [
 export function SideBar() {
     const [active, setActive] = useState('Billing');
 
-    const links = data.map((item) => (
-        <a
-            className={classes.link}
-            data-active={item.label === active || undefined}
-            href={item.link}
-            key={item.label}
-            onClick={(event) => {
-                event.preventDefault();
-                setActive(item.label);
-            }}
-        >
-            <item.icon className={classes.linkIcon} stroke={1.5} />
-            <span>{item.label}</span>
-        </a>
+    const links = data.map((item, index) => (
+        <Link
+        className={classes.link}
+        to={item.link}
+        key={index}
+        onClick={() => setActive(item.label)}
+    >
+        <item.icon className={classes.linkIcon} stroke={1.5} />
+        <span>{item.label}</span>
+    </Link>
     ));
 
     return (

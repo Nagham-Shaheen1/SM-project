@@ -33,9 +33,9 @@ const NavBar = () => {
                 mx={350}
             >
                 {
-                    routerLink.map((link) => {
+                    routerLink.map((link,index) => {
                         return (
-                            <Link to={link.path} >
+                            <Link key={index} to={link.path} >
                                 {link.name}
                             </Link>
                         )

@@ -1,9 +1,13 @@
-import React from 'react'
+import { Table } from '@mantine/core';
+import Cards from '../components/Cards';
 
 const HomePage = () => {
     return (
-        <div>HomePage</div>
-    )
-}
+      <>
+      <Cards />
+      </>
+      );
+   
+    }
 
 export default HomePage

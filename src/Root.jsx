@@ -5,6 +5,7 @@ import './Root.css'
 import { useSelector } from 'react-redux'
 import { SideBar } from './components/SideBar'
 
+
 const Root = () => {
     const themeMode = useSelector(state => state.sliceTheme.mode)
 
@@ -14,6 +15,7 @@ const Root = () => {
             <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
                 <NavBar style={{ width: '90%', height: '60px', marginBottom: '20px' }} />
                 <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                
                     <Outlet />
                 </div>
             </div>
